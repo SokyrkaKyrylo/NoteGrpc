@@ -1,0 +1,2 @@
+obj\Debug\net7.0\Protos/Note.cs \
+obj\Debug\net7.0\Protos/NoteGrpc.cs: Protos/note.proto

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "m3Om7ZPsQZaJJY1Q64FxWRg8Kw7TmbZ7hBddicGTNP8=",
+  "Source": "NoteGrpc",
+  "BasePath": "_content/NoteGrpc",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

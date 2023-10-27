@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+option csharp_namespace = "NoteGrpc";
+
+package note;
+
+// The note service definition.
+service Note {
+  // Create
+  rpc CreateNote(CreateNoteRequest) returns (CreateNoteResponse) {};
+
+  // Read single
+  rpc ReadNote(ReadNoteRequest) returns (ReadNoteResponse) {};
+
+  // Read list
+  rpc ListNotes(GetAllRequest) returns (GetAllResponse) {};
+
+  // Update
+  rpc UpdateNotes(UpdateNoteRequest) returns (UpdateNoteResponse) {};
+
+  // Delete
+  rpc DeleteNote (DeleteNoteRequest) returns (DeleteNoteResponse);
+}
+
+message CreateNoteRequest {
+  string title = 1;
+  string description = 2;
+}
+
+message CreateNoteResponse {
+  int32 id = 1;
+}
+
+message ReadNoteRequest {
+  int32 id = 1;
+}
+
+message ReadNoteResponse {
+  int32 id = 1;
+  string title = 2;
+  string description = 3;
+}
+
+message GetAllRequest {}
+
+message GetAllResponse {
+  repeated ReadNoteResponse note = 1;
+}
+
+message UpdateNoteRequest {
+  int32 id = 1;
+  string title = 2;
+  string description = 3;
+}
+
+message UpdateNoteResponse {
+  int32 id = 1;
+}
+
+message DeleteNoteRequest {
+  int32 id = 1;
+}
+
+message DeleteNoteResponse {
+  int32 id = 1;
+}
